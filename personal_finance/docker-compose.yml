@@ -1,0 +1,25 @@
+# Version del formato de archivo de Docker Compose
+version: '3.8'
+
+# Definicion de los contenedores que compondra la aplicacion
+services:
+  # Servicio para la base de datos PostgreSQL
+  db:
+    # Usaremos la imagen oficial de PostgreSQL version 15
+    image: 'postgres:15'
+    # Mapeo de puertos: El puerto 5432 del contenedor se expondra como el puerto 5432 en nuestra maquina local (host)
+    ports:
+      - "5432:5432"
+    # Variables de entorno para configurar la base de datos
+    # OJO debe coincidir con application.properties
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=Mateito6900@
+      - POSTGRES_DB=personal_finance_db
+    # Montaje de un volumen para que los datos de la BD persistan incluso si el contenedor se detiene o se elimina
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+# Definicion de los volumenes nombrados
+volumes:
+  postgres_data:
