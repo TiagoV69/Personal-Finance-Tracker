@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-PersonalFinanceApplication<personal_finance>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.portafolio.personal_finance.personal_finance.PersonalFinanceApplication",
+            "projectName": "personal_finance",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

@@ -1,6 +1,3 @@
-# Version del formato de archivo de Docker Compose
-version: '3.8'
-
 # Definicion de los contenedores que compondra la aplicacion
 services:
   # Servicio para la base de datos PostgreSQL
