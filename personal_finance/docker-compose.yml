@@ -10,8 +10,8 @@ services:
     # Variables de entorno para configurar la base de datos
     # OJO debe coincidir con application.properties
     environment:
-      - POSTGRES_USER=root
-      - POSTGRES_PASSWORD=Mateito6900@
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=password
       - POSTGRES_DB=personal_finance_db
     # Montaje de un volumen para que los datos de la BD persistan incluso si el contenedor se detiene o se elimina
     volumes:
