@@ -1,6 +1,8 @@
 package com.portafolio.personal_finance.personal_finance.controller;
 
 
+import com.portafolio.personal_finance.personal_finance.dto.AuthResponse;
+import com.portafolio.personal_finance.personal_finance.dto.LoginRequest;
 import com.portafolio.personal_finance.personal_finance.dto.RegisterRequest;
 import com.portafolio.personal_finance.personal_finance.service.AuthService;
 
@@ -27,5 +29,10 @@ public class AuthController {
 
         // Devolvemos una respuesta HTTP 200 OK con un mensaje de éxito.
         return ResponseEntity.ok("Usuario registrado exitosamente");
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<AuthResponse> login(@RequestBody LoginRequest request) {
+        return ResponseEntity.ok(authService.login(request));
     }
 }
